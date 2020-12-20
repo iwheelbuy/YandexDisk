@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <p id="text"></p>
+        <script type="text/javascript">
+            window.onload = function() {
+                var components0 = window.location.href.split('.html?#');
+                var components1 = window.location.href.split('.html#');
+                var components2 = window.location.href.split('.html?');
+                if (components0.length == 2) {
+                    var link = 'iwbydap:/simplified?' + components0[1];
+<!--                    document.getElementById("text").innerHTML = link;-->
+                    window.location.replace(link);
+                } else if (components1.length == 2) {
+                    var link = 'iwbydap:/simplified?' + components1[1];
+<!--                    document.getElementById("text").innerHTML = link;-->
+                    window.location.replace(link);
+                } else if (components2.length == 2) {
+                    var link = 'iwbydap:/simplified?' + components2[1];
+<!--                    document.getElementById("text").innerHTML = link;-->
+                    window.location.replace(link);
+                } else {
+                    var link = 'iwbydap:/simplified?';
+                    document.getElementById("text").innerHTML = window.location.href;
+                    window.location.replace(link);
+                }
+            }
+        </script>
+    </body>
+</html>
